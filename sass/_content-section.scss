@@ -7,7 +7,15 @@
 	}
 
 	&.content-section--gray-bg {
-		background-color: $color-light;
+		background-color: $color-lighter;
+	}
+
+	&#work {
+		padding-bottom: 25px;
+
+		@include responsive(medium) {
+			padding-bottom: 35px;
+		}
 	}
 
 	p {

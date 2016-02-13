@@ -39,8 +39,8 @@
 
 	.contact-form__message {
 		p {
-			margin-bottom: 20px;
-			text-align: center;
+			margin-bottom: 20px !important;
+			text-align: center !important;
 		}
 		&.success p {
 			color: green;
