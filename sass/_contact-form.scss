@@ -26,10 +26,32 @@
 			outline: 0;
 			border-color: $color-dark-gray;
 		}
+
+		&.invalid {
+			border-color: red;
+		}
 	}
 
 	textarea {
 		min-height: 125px;
 	}
 }
+
+	.contact-form__message {
+		p {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		&.success p {
+			color: green;
+		}
+
+		&.error p {
+			color: red;
+		}
+
+		&.hidden {
+			display: none;
+		}
+	}
 

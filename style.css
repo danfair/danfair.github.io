@@ -208,8 +208,25 @@ p:not([class]), .content-section p {
   outline: 0;
   border-color: #707070;
 }
+.contact-form input:not([type=submit]).invalid, .contact-form textarea.invalid {
+  border-color: red;
+}
 .contact-form textarea {
   min-height: 125px;
+}
+
+.contact-form__message p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contact-form__message.success p {
+  color: green;
+}
+.contact-form__message.error p {
+  color: red;
+}
+.contact-form__message.hidden {
+  display: none;
 }
 
 .content-section {
@@ -465,6 +482,7 @@ p:not([class]), .content-section p {
   max-width: 100%;
   padding-right: 40px;
   color: #707070;
+  text-align: left;
 }
 .work p:last-of-type {
   margin-bottom: 25px;
@@ -478,7 +496,7 @@ p:not([class]), .content-section p {
   padding-bottom: 25px;
   margin-bottom: 25px;
   border-bottom: 1px solid #d4d1d1;
-  text-align: left;
+  text-align: center;
   zoom: 1;
 }
 .work__project:after {
@@ -488,6 +506,7 @@ p:not([class]), .content-section p {
 }
 @media only screen and (min-width: 720px) {
   .work__project {
+    text-align: left;
     max-width: 100%;
     padding-bottom: 40px;
     margin-bottom: 40px;
@@ -496,6 +515,14 @@ p:not([class]), .content-section p {
 .work__project:last-child {
   margin-bottom: 0;
   border-bottom: 0;
+}
+.work__project .btn {
+  margin: 10px 0;
+}
+@media only screen and (min-width: 720px) {
+  .work__project .btn {
+    margin: 0;
+  }
 }
 
 .work__project-img {

@@ -94,13 +94,21 @@
 				<img class="content-section__lead-img" src="img/pen.png">
 				<h2 class="content-section__title h1">Contact</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<form class="contact-form">
+				<form class="contact-form" action="//formspree.io/fair.dan@gmail.com"
+      method="POST">
 					<input type="text" name="name" id="name" placeholder="Name">
-					<input type="email" name="email" id="email" placeholder="Email">
+					<input type="email" name="_reply-to" id="email" placeholder="Email">
 					<textarea name="message" id="message" placeholder="Message"></textarea>
-					<input class="btn btn--outline-black" type="submit" value="Send">
+					<input type="text" name="_gotcha" style="display:none" />
+					<div class="contact-form__message error js-validation-error hidden">
+						<p>Please fill out the required fields. They're all required so I can contact you!</p>
+					</div>
+					<div class="contact-form__message error js-form-error hidden">
+						<p>Sorry, there was some sort of error submitting the form! Please contact me on any of the channels listed in the footer or try again later.</p>
+					</div>
+					<input class="btn btn--outline-black js-contact-submit" type="submit" value="Send">
 				</form>
-				<div class="contact-form__success-message hidden">
+				<div class="contact-form__message success hidden">
 					<p>Thanks! I'll get back to you as soon as I can, usually within 24 hours.</p>
 				</div>
 			</div>
