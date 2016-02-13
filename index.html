@@ -6,12 +6,13 @@
 
 		<title>Dan Fair | Front End Developer</title>
 		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="vendor/swipebox-master/src/css/swipebox.min.css" rel="stylesheet" type="text/css">
 		<link href="style.min.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<header class="header" id="header">
 			<div class="container">
-				<a href="#header" class="header__logo js-scroll-link">Dan Fair</a>
+				<a href="#hero" class="header__logo js-scroll-link">Dan Fair</a>
 				<nav class="header__nav">
 					<ul>
 						<li><a class="js-scroll-link" href="#about">About</a></li>
@@ -24,7 +25,7 @@
 				</a>
 			</div>
 		</header>
-		<section class="hero">
+		<section class="hero" id="hero">
 			<div class="container">
 				<div class="hero__content">
 					<h1 class="hero__title h2">Hey! I'm a freelance front-end and WordPress developer</h1>
@@ -58,8 +59,25 @@
 							<h3 class="work__project-title h2">Veedro Films</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="http://veedro.com" class="btn btn--outline-orange to-black">See site</a>
-							<a href="#" class="btn btn--no-outline js-launch-slideshow">Launch slideshow</a>
+							<a href="http://veedro.com" class="btn btn--outline-orange to-black" target="_blank">See site</a>
+							<a rel="veedro-gallery" href="img/veedro/clients.png" class="btn btn--no-outline swipebox js-launch-slideshow">Launch slideshow</a>
+							<div class="work__project-slideshow">
+								<a rel="veedro-gallery" href="img/veedro/clients.png" class="swipebox" title="My Caption">
+								<img src="img/veedro/clients.png" alt="image">
+								</a>
+								<a rel="veedro-gallery" href="img/veedro/devices.png" class="swipebox" title="My Caption">
+								<img src="img/veedro/devices.png" alt="image">
+								</a>
+								<a rel="veedro-gallery" href="img/veedro/instagram.png" class="swipebox" title="My Caption">
+								<img src="img/veedro/instagram.png" alt="image">
+								</a>
+								<a rel="veedro-gallery" href="img/veedro/hero.png" class="swipebox" title="My Caption">
+								<img src="img/veedro/hero.png" alt="image">
+								</a>
+								<a rel="veedro-gallery" href="img/veedro/page_hero.png" class="swipebox" title="My Caption">
+								<img src="img/veedro/page_hero.png" alt="image">
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="work__project">
@@ -70,8 +88,16 @@
 							<h3 class="work__project-title h2">Veedro Films</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="http://veedro.com" class="btn btn--outline-orange to-black">See site</a>
-							<a href="#" class="btn btn--no-outline js-launch-slideshow">Launch slideshow</a>
+							<a href="http://veedro.com" class="btn btn--outline-orange to-black" target="_blank">See site</a>
+							<a rel="second-gallery" href="img/veedro/clients.png" class="btn btn--no-outline swipebox js-launch-slideshow">Launch slideshow</a>
+							<div class="work__project-slideshow">
+								<!-- <a rel="second-gallery" href="img/veedro/clients.png" class="swipebox" title="My Caption">
+								<img src="img/veedro/clients.png" alt="image">
+								</a> -->
+								<a rel="second-gallery" href="img/veedro/devices.png" class="swipebox" title="My Caption">
+								<img src="img/veedro/devices.png" alt="image">
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="work__project">
@@ -82,7 +108,7 @@
 							<h3 class="work__project-title h2">Veedro Films</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="http://veedro.com" class="btn btn--outline-orange to-black">See site</a>
+							<a href="http://veedro.com" class="btn btn--outline-orange to-black" target="_blank">See site</a>
 							<a href="#" class="btn btn--no-outline js-launch-slideshow">Launch slideshow</a>
 						</div>
 					</div>
@@ -123,6 +149,7 @@
 			</div>
 		</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="vendor/swipebox-master/src/js/jquery.swipebox.min.js"></script>
 	<script src="/js/main.min.js"></script>
 	</body>
 </html>

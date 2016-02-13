@@ -3,7 +3,7 @@
 
 	function _init() {
 		els.header = $('.header');
-
+		els.body = $('body');
 		_events();
 	}
 
@@ -14,7 +14,7 @@
 			els.header.toggleClass('mobile-menu-open');
 		});
 
-		$('body').on('click', function() {
+		els.body.on('click', function() {
 			if (els.header.hasClass('mobile-menu-open')) {
 				els.header.removeClass('mobile-menu-open'); 
 			}
@@ -22,13 +22,15 @@
 
 		$('.js-scroll-link').on('click', function(e) {
 			e.preventDefault();
+			var hashEl = $(e.target.hash);
+			var headerOffset = e.target.hash === '#hero' ? 70 : 20;
+
             $("html, body").animate({
-                scrollTop: $(e.target.hash).offset().top - 20
+                scrollTop: hashEl.offset().top - headerOffset
             }, 500);
 		});
 
 		$('.contact-form input, .contact-form textarea').blur(function() {
-			console.log('firing');
 			if ($(this).hasClass('invalid') && $(this).val() !== '') {
 				$(this).removeClass('invalid');
 			}
@@ -36,29 +38,48 @@
 
 		$('.js-contact-submit').on('click', function(e) {
 			e.preventDefault();
-			var form = $('.contact-form');
-			form.find('input').removeClass('invalid');
+			_handleForm();
+		});
 
-			var formData = {};
-			formData.message = form.find('#message').val();
-			formData.email = form.find('#email').val();
-			formData.name = form.find('#name').val();
+		$('.js-launch-slideshow').on('click', function(e) {
+			e.preventDefault();
+			_handleSlideshow($(this));
+		});
 
-			var validData = _validateForm(formData);
-			if (validData) {
-				$.ajax({
-				    url: "//formspree.io/fair.dan@gmail.com", 
-				    method: "POST",
-				    data: formData,
-				    dataType: "json",
-				    success: function(data) {
-				    	$('.contact-form').slideUp(500);
-				    	$('.contact-form__message.success').removeClass('hidden').fadeIn(500);
-				    }
-				});
-			} else {
-				return;
-			}
+		$( '.swipebox' ).swipebox();
+	}
+
+	function _handleForm() {
+		var form = $('.contact-form');
+		form.find('input').removeClass('invalid');
+
+		var formData = {};
+		formData.message = form.find('#message').val();
+		formData.email = form.find('#email').val();
+		formData.name = form.find('#name').val();
+
+		var validData = _validateForm(formData);
+		if (validData) {
+			_submitForm(formData);
+		} else {
+			return;
+		}
+	}
+
+	function _handleSlideshow(link) {
+
+	}
+
+	function _submitForm(formData) {
+		$.ajax({
+		    url: "//formspree.io/fair.dan@gmail.com", 
+		    method: "POST",
+		    data: formData,
+		    dataType: "json",
+		    success: function(data) {
+		    	$('.contact-form').slideUp(500);
+		    	$('.contact-form__message.success').removeClass('hidden').fadeIn(500);
+		    }
 		});
 	}
 

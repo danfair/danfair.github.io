@@ -569,4 +569,8 @@ p:not([class]), .content-section p {
   margin-bottom: 10px;
 }
 
+.work__project-slideshow {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
