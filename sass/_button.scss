@@ -1,0 +1,62 @@
+.btn {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	background: none;
+	border: 1px solid;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	font: 14px $font-heading;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	outline: none;
+	overflow: hidden;
+	padding: 10px 35px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition-duration: $transition-speed-slow;
+	transition-property: all;
+	transition-timing-function: $transition-ease;
+	vertical-align: middle;
+	zoom: 1;
+}
+
+.btn--outline-orange {
+	border-color: $color-orange;
+	color: $color-orange;
+
+	&:hover {
+		border-color: $color-white;
+		color: $color-white;
+	}
+
+	&.to-black {
+		&:hover {
+			border-color: $color-black;
+			color: $color-black;
+		}
+	}
+}
+
+.btn--outline-black {
+	border-color: $color-black;
+	color: $color-black;
+
+	&:hover {
+		background-color: $color-light;
+	}
+}
+
+.btn--no-outline {
+	border: 0;
+	color: $color-black;
+	text-decoration: underline;
+
+	&:hover {
+		color: $color-gray;
+	}
+}

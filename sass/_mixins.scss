@@ -1,0 +1,68 @@
+@mixin responsive($breakpoint, $max-width:false) {
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $max-width {
+      @media only screen and (max-width: $value) {
+        @content;
+      }
+    } @else {
+      @media only screen and (min-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin placeholderSize($smallSize, $largeSize, $color, $fontStyle:normal) {
+  &::-webkit-input-placeholder {
+     font-family: $font-body;
+     font-size: $smallSize;
+     font-style: $fontStyle;
+     color: $color;
+
+      @include responsive(medium) {
+        font-size: $largeSize;
+      }
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+     font-family: $font-body;
+     font-size: $smallSize;
+     font-style: $fontStyle;
+     color: $color;
+
+      @include responsive(medium) {
+        font-size: $largeSize;
+      }  
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+     font-family: $font-body;
+     font-size: $smallSize;
+     font-style: $fontStyle;
+     color: $color;
+
+      @include responsive(medium) {
+        font-size: $largeSize;
+      }  
+  }
+  &:-ms-input-placeholder {  
+     font-family: $font-body;
+     font-size: $smallSize;
+     font-style: $fontStyle;
+     color: $color;
+
+      @include responsive(medium) {
+        font-size: $largeSize;
+      }  
+  }
+}
