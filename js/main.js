@@ -3,7 +3,8 @@
 
 	function _init() {
 		els.header = $('.header');
-		els.body = $('body');
+		els.win = $(window);
+		els.htmlBody = $('html, body');
 		_events();
 	}
 
@@ -14,10 +15,12 @@
 			els.header.toggleClass('mobile-menu-open');
 		});
 
-		els.body.on('click', function() {
-			if (els.header.hasClass('mobile-menu-open')) {
-				els.header.removeClass('mobile-menu-open'); 
-			}
+		els.win.on('scroll', function() {
+			_closeHeader(els.header.hasClass('mobile-menu-open'));
+		});
+
+		els.htmlBody.on('click', function() {
+			_closeHeader(els.header.hasClass('mobile-menu-open'));
 		});
 
 		$('.js-scroll-link').on('click', function(e) {
@@ -25,7 +28,7 @@
 			var hashEl = $(e.target.hash);
 			var headerOffset = e.target.hash === '#hero' ? 70 : 20;
 
-            $("html, body").animate({
+            els.htmlBody.animate({
                 scrollTop: hashEl.offset().top - headerOffset
             }, 500);
 		});
@@ -47,6 +50,12 @@
 		});
 
 		$( '.swipebox' ).swipebox();
+	}
+
+	function _closeHeader(isOpen) {
+		if (isOpen) {
+			els.header.removeClass('mobile-menu-open'); 
+		}
 	}
 
 	function _handleForm() {

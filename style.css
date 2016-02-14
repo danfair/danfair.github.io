@@ -319,7 +319,7 @@ p:not([class]), .content-section p {
   }
 }
 .header.mobile-menu-open {
-  top: 50px;
+  top: 40px;
 }
 
 .header__logo {
