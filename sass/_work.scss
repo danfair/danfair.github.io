@@ -16,9 +16,6 @@
 
 	.work__project {
 		position: relative;
-		max-width: 90%;
-		margin-left: auto;
-		margin-right: auto;
 		padding-bottom: 25px;
 		margin-bottom: 25px;
 		border-bottom: 1px solid $color-light-gray;
@@ -27,7 +24,9 @@
 
 		@include responsive(medium) {
 			text-align: left;
-			max-width: 100%;
+			max-width: 90%;
+			margin-left: auto;
+			margin-right: auto;
 			padding-bottom: 40px;
 			margin-bottom: 40px;
 		}
