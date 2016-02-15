@@ -5,13 +5,17 @@
 @import 'typography';
 
 .container {
-	max-width: 1170px;
+	max-width: 1040px;
 	padding: 0 25px;
 	margin: 0 auto;
 
 	@include responsive(large) {
 		padding: 0 50px;
 	}
+}
+
+.container--wide {
+	max-width: 1170px;
 }
 
 .hidden {

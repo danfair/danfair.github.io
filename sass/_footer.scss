@@ -21,6 +21,13 @@
 		&.linkedin {
 			background-image: url(/img/icon-linkedin.png);
 		}
+
+		&.strava {
+			background-image: url(/img/strava.png);
+			width: 20px;
+			height: 29px;
+			transform: translateY(2px);
+		}
 		
 		svg {
 			max-width: 100%;

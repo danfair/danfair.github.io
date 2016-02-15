@@ -9,10 +9,13 @@
 	}
 
 	function _events() {
-		$('.js-open-menu').on('click', function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-			els.header.toggleClass('mobile-menu-open');
+
+		var resizeTimer;
+		els.win.on('resize', function(e) {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout( function() {
+				_closeHeader(els.header.hasClass('mobile-menu-open'));
+			}, 250);
 		});
 
 		els.win.on('scroll', function() {
@@ -21,6 +24,12 @@
 
 		els.htmlBody.on('click', function() {
 			_closeHeader(els.header.hasClass('mobile-menu-open'));
+		});
+
+		$('.js-open-menu').on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			els.header.toggleClass('mobile-menu-open');
 		});
 
 		$('.js-scroll-link').on('click', function(e) {

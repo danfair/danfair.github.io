@@ -24,3 +24,14 @@
 p:not([class]) {
 	@extend %p;
 }
+
+a:not([class]) {
+	color: $color-orange;
+	text-decoration: none;
+	transition: color $transition-speed $transition-ease;
+
+	&:hover {
+		text-decoration: underline;
+		color: darken($color-orange, 10%);
+	}
+}
