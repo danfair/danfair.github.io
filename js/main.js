@@ -57,8 +57,6 @@
 			e.preventDefault();
 			_handleSlideshow($(this));
 		});
-
-		$( '.swipebox' ).swipebox();
 	}
 
 	function _closeHeader(isOpen) {
