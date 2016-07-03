@@ -1,4 +1,4 @@
-(function($) {    
+(function($) {
 	var els = {};
 
 	function _init() {
@@ -61,7 +61,7 @@
 
 	function _closeHeader(isOpen) {
 		if (isOpen) {
-			els.header.removeClass('mobile-menu-open'); 
+			els.header.removeClass('mobile-menu-open');
 		}
 	}
 
@@ -82,13 +82,9 @@
 		}
 	}
 
-	function _handleSlideshow(link) {
-
-	}
-
 	function _submitForm(formData) {
 		$.ajax({
-		    url: "//formspree.io/fair.dan@gmail.com", 
+		    url: "//formspree.io/fair.dan@gmail.com",
 		    method: "POST",
 		    data: formData,
 		    dataType: "json",
@@ -101,6 +97,7 @@
 
 	function _validateForm(formData) {
 		var returnVal = true;
+		console.log(formData);
 		for (var field in formData) {
 			if (!formData[field]) {
 				$('#' + field).addClass('invalid');
@@ -113,8 +110,8 @@
 		return returnVal;
 	}
 
-	$(document).ready(function() {   
-		_init(); 
-	});    
+	$(document).ready(function() {
+		_init();
+	});
 
 })(jQuery);
