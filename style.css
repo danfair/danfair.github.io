@@ -595,6 +595,9 @@ a:not([class]):hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.work__project-logo.work__project-logo--wide {
+  max-width: 85%;
+}
 
 @media only screen and (min-width: 720px) {
   .work__project-content {
