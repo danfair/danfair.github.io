@@ -74,6 +74,10 @@ a:not([class]):hover {
   color: #cc5200;
 }
 
+.body-wrapper {
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1040px;
   padding: 0 25px;
@@ -320,6 +324,7 @@ a:not([class]):hover {
   background-image: url(/img/strava.png);
   width: 20px;
   height: 29px;
+  -ms-transform: translateY(2px);
   transform: translateY(2px);
 }
 .footer__social-link svg {
@@ -469,6 +474,7 @@ a:not([class]):hover {
   position: absolute;
   top: 50%;
   left: 50%;
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 0 25px;
@@ -507,6 +513,7 @@ a:not([class]):hover {
   background-image: url(/img/strava.png);
   width: 20px;
   height: 29px;
+  -ms-transform: translateY(2px);
   transform: translateY(2px);
 }
 .hero__social-link svg {
@@ -601,6 +608,7 @@ a:not([class]):hover {
   position: absolute;
   top: 50%;
   left: 50%;
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .work__project-logo.work__project-logo--wide {
@@ -624,5 +632,3 @@ a:not([class]):hover {
 .work__project-slideshow {
   display: none;
 }
-
-/*# sourceMappingURL=style.css.map */
