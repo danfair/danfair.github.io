@@ -46,7 +46,9 @@
 	}
 
 		.work__project-img {
-			height: 200px;
+			// height: 200px;
+			height: 0;
+			padding-bottom: 52.5%;
 			width: 100%;
 			background-size: cover;
 			background-position: center center;
@@ -57,6 +59,7 @@
 				position: absolute;
 				top: 0;
 				left: 0;
+				padding-bottom: 0;
 				height: calc(100% - 40px);
 				margin-bottom: 0;
 				@include span(3 of 9);
@@ -73,7 +76,8 @@
 		}
 
 			.work__project-logo {
-				max-width: 75%;
+				width: 75%;
+				max-width: 350px;
 				max-height: 50%;
 				position: absolute;
 				top: 50%;
@@ -81,7 +85,7 @@
 				transform: translate(-50%, -50%);
 
 				&.work__project-logo--wide {
-					max-width: 85%;
+					width: 85%;
 				}
 			}
 

@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'js/main.min.js': ['js/main.js']
+          'js/main.min.js': ['js/jquery.waypoints.min.js', 'js/main.js']
         }
       }
     },
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
     watch: {
         scripts: {
           files: 'js/main.js',
-          tasks: ['jshint', 'uglify'],
+          tasks: ['uglify'],
           options: {
             livereload: 35729,
           }

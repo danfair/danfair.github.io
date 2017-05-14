@@ -5,6 +5,19 @@
 		els.header = $('.header');
 		els.win = $(window);
 		els.htmlBody = $('html, body');
+
+		var waypoints = $('.content-section').waypoint({
+			handler: function(direction) {
+				$('.header__nav ul li a').removeClass('active');
+				var associatedMenuLink = $('.header__nav ul li a[href="#' + this.element.id + '"]');
+				if (direction === 'down') {
+					associatedMenuLink.addClass('active');
+				} else {
+					associatedMenuLink.closest('li').prev().find('a').addClass('active');
+				}
+			}
+		})
+		
 		_events();
 	}
 

@@ -440,11 +440,11 @@ a:not([class]):hover {
     margin-top: 10px;
   }
 }
-.header__nav ul li a:hover {
+.header__nav ul li a:hover, .header__nav ul li a.active {
   color: #d4d1d1;
 }
 @media only screen and (min-width: 640px) {
-  .header__nav ul li a:hover {
+  .header__nav ul li a:hover, .header__nav ul li a.active {
     color: #000;
   }
 }
@@ -564,7 +564,8 @@ a:not([class]):hover {
 }
 
 .work__project-img {
-  height: 200px;
+  height: 0;
+  padding-bottom: 52.5%;
   width: 100%;
   background-size: cover;
   background-position: center center;
@@ -576,6 +577,7 @@ a:not([class]):hover {
     position: absolute;
     top: 0;
     left: 0;
+    padding-bottom: 0;
     height: calc(100% - 40px);
     margin-bottom: 0;
     width: 31.81818%;
@@ -593,7 +595,8 @@ a:not([class]):hover {
 }
 
 .work__project-logo {
-  max-width: 75%;
+  width: 75%;
+  max-width: 350px;
   max-height: 50%;
   position: absolute;
   top: 50%;
@@ -601,7 +604,7 @@ a:not([class]):hover {
   transform: translate(-50%, -50%);
 }
 .work__project-logo.work__project-logo--wide {
-  max-width: 85%;
+  width: 85%;
 }
 
 @media only screen and (min-width: 720px) {
