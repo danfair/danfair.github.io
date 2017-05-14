@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
@@ -38,7 +38,7 @@
 					</ul>
 				</nav>
 				<a href="#" class="header__menu-icon js-open-menu">
-					<img src="img/burg.svg">
+					<img src="img/burg.svg" role="presentation">
 				</a>
 			</div>
 		</header>
@@ -58,7 +58,7 @@
 		</section>
 		<section class="content-section" id="about">
 			<div class="container">
-				<img class="content-section__lead-img" src="img/about.svg">
+				<img class="content-section__lead-img" src="img/about.svg" role="presentation">
 				<h2 class="content-section__title h1">About</h2>
 				<p>Hey there! My name is Dan Fair, and I'm a front-end and WordPress developer located in Minneapolis, MN.</p>
 				<p>During the day (and sometimes at night), I'm a web developer at <a href="http://folklore.digital">Folklore Digital</a>. On the side, I occasionally take on contract and freelance work for front-end work and/or WordPress theme development. If you're interested, shoot me a message below!</p>
@@ -67,12 +67,13 @@
 		</section>
 		<section class="content-section content-section--gray-bg" id="work">
 			<div class="container">
+				<img class="content-section__lead-img" src="img/briefcase.svg" role="presentation">
 				<h2 class="content-section__title h1">Work</h2>
 				<div class="work">
 					<div class="work__project">
 						<div class="work__project-img" style="background-image: url(img/iabg/iabg_cover.jpg);">
 							<div class="black-overlay"></div>
-							<img src="img/iabg_logo_white.svg" class="work__project-logo work__project-logo--wide">
+							<img src="img/iabg_logo_white.svg" class="work__project-logo work__project-logo--wide" role="presentation">
 						</div>
 						<div class="work__project-content">
 							<h3 class="work__project-title h2">Illinois Asset Building Group</h3>
@@ -84,7 +85,7 @@
 					<div class="work__project">
 						<div class="work__project-img" style="background-image: url(img/veedro_featured.jpg);">
 							<div class="black-overlay"></div>
-							<img src="img/veedro_logo.png" class="work__project-logo">
+							<img src="img/veedro_logo.png" class="work__project-logo" alt="Veedro logo">
 						</div>
 						<div class="work__project-content">
 							<h3 class="work__project-title h2">Veedro Films</h3>
@@ -98,12 +99,15 @@
 		</section>
 		<section class="content-section" id="contact">
 			<div class="container">
-				<img class="content-section__lead-img" src="img/pen.png">
+				<img class="content-section__lead-img" src="img/pen.png" role="presentation">
 				<h2 class="content-section__title h1">Contact</h2>
 				<p>Use the form below to send me an email, or feel free to contact me directly on <a href="https://twitter.com/sdanfair">Twitter</a>, <a href="https://linkedin.com/in/danfair">LinkedIn</a>, or <a href="https://github.com/danfair">Github</a>.</p>
 				<form class="contact-form">
+					<label for="name">Name</label>
 					<input id="name" type="text" name="name" placeholder="Name">
+					<label for="email">Email</label>
 					<input id="email" type="email" name="_reply-to" placeholder="Email">
+					<label for="message">Name</label>
 					<textarea id="message" name="message" placeholder="Message"></textarea>
 					<input type="text" name="_gotcha" style="display:none" />
 					<div class="contact-form__message error js-validation-error hidden">

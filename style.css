@@ -150,6 +150,11 @@ a:not([class]):hover {
   color: #b7b7b7;
 }
 
+.contact-form label {
+  font-size: 0;
+  position: absolute;
+  left: -9999px;
+}
 .contact-form input:not([type=submit]), .contact-form textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
