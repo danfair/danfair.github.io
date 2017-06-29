@@ -169,6 +169,13 @@
 
 		ga('create', 'UA-54664907-1', 'auto');
 		ga('send', 'pageview');
+		
+		for (var i = 0; i < link.length; i++) {
+			link[i].addEventListener('click', function(e) { 
+				console.log(e); 
+			});
+		}
+		ga('send', 'event', 'Clicks', 'Site Click', e.target.text + ' (' + e.target.href + ')');
 
 	</script>
 	</body>
