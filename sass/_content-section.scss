@@ -46,3 +46,38 @@
 		text-align: center;
 		font-weight: bold;
 	}
+
+	.content-section__control {
+		padding-bottom: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& > div {
+			padding: 0 20px;
+		}
+	}
+
+		.control-link {
+			color: $color-orange;
+			font-family: $font-heading;
+			font-weight: bold;
+			text-transform: uppercase;
+			line-height: 1.5em;
+			font-size: 14px;
+			text-decoration: none;
+
+			&.disabled {
+				pointer-events: none;
+				color: $color-dark-gray;
+			}
+		}
+
+		.control-divider {
+			width: 1px;
+			height: 20px;
+			transform: translateY(6px);
+			background-color: $color-dark-gray;
+			margin: 0 12px;
+			display: inline-block;
+		}

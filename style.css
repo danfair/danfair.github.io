@@ -298,6 +298,39 @@ a:not([class]):hover {
   font-weight: bold;
 }
 
+.content-section__control {
+  padding-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-section__control > div {
+  padding: 0 20px;
+}
+
+.control-link {
+  color: #ff6600;
+  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-size: 14px;
+  text-decoration: none;
+}
+.control-link.disabled {
+  pointer-events: none;
+  color: #707070;
+}
+
+.control-divider {
+  width: 1px;
+  height: 20px;
+  transform: translateY(6px);
+  background-color: #707070;
+  margin: 0 12px;
+  display: inline-block;
+}
+
 .footer {
   background-color: #d4d1d1;
   padding: 25px 0;
@@ -324,7 +357,6 @@ a:not([class]):hover {
   background-image: url(/img/strava.png);
   width: 20px;
   height: 29px;
-  -ms-transform: translateY(2px);
   transform: translateY(2px);
 }
 .footer__social-link svg {
@@ -474,7 +506,6 @@ a:not([class]):hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 0 25px;
@@ -513,7 +544,6 @@ a:not([class]):hover {
   background-image: url(/img/strava.png);
   width: 20px;
   height: 29px;
-  -ms-transform: translateY(2px);
   transform: translateY(2px);
 }
 .hero__social-link svg {
@@ -532,6 +562,21 @@ a:not([class]):hover {
 }
 .work p:last-of-type {
   margin-bottom: 25px;
+}
+.work .work__client-work,
+.work .work__personal-work {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+  transform: translateY(40px);
+  padding: 0 25px;
+}
+.work.client-work-open .work__client-work, .work.personal-work-open .work__personal-work {
+  opacity: 1;
+  position: relative;
+  left: unset;
+  transform: translateY(0);
+  transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .work__project {
@@ -608,7 +653,6 @@ a:not([class]):hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .work__project-logo.work__project-logo--wide {
@@ -632,3 +676,5 @@ a:not([class]):hover {
 .work__project-slideshow {
   display: none;
 }
+
+/*# sourceMappingURL=style.css.map */

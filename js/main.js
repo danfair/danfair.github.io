@@ -70,6 +70,23 @@
 			e.preventDefault();
 			_handleSlideshow($(this));
 		});
+
+		$('.js-show-client-work, .js-show-personal-work').on('click', function(e) {
+			e.preventDefault();
+			var $this = $(this);
+			console.log('this', $this);
+			if ($this.hasClass('js-show-client-work')) {
+				console.log('1');
+				$('.js-show-client-work').addClass('disabled');
+				$('.js-show-personal-work').removeClass('disabled');
+				$('.js-work-section').removeClass('personal-work-open').addClass('client-work-open');
+			} else {
+				console.log('2');
+				$('.js-show-personal-work').addClass('disabled');
+				$('.js-show-client-work').removeClass('disabled');
+				$('.js-work-section').removeClass('client-work-open').addClass('personal-work-open');
+			}
+		})
 	}
 
 	function _closeHeader(isOpen) {
