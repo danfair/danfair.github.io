@@ -606,9 +606,11 @@ a:not([class]):hover {
   margin-bottom: 0;
   border-bottom: 0;
 }
-.work__project:nth-child(2) .work__project-logo {
-  width: auto;
-  max-width: none;
+@media only screen and (min-width: 720px) {
+  .work__project:nth-child(2) .work__project-logo {
+    width: auto;
+    max-width: none;
+  }
 }
 .work__project .btn {
   margin: 10px 0;

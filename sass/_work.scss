@@ -55,9 +55,11 @@
 		}
 		
 		&:nth-child(2) {
-			.work__project-logo {
-				width: auto;
-				max-width: none;
+			@include responsive(medium) {
+				.work__project-logo {
+					width: auto;
+					max-width: none;
+				}
 			}
 		}
 
