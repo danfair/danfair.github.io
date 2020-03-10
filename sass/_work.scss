@@ -47,12 +47,14 @@
 			margin-right: auto;
 			padding-bottom: 40px;
 			margin-bottom: 40px;
+		}
 		
-			&:nth-child(2) {
-				.work__project-logo {
+		&:nth-child(2) {
+			.work__project-logo {
+				max-height: 35%;
+				@include responsive(medium) {
 					width: auto;
 					max-width: none;
-					max-height: 35%;
 				}
 			}
 		}
