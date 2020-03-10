@@ -601,16 +601,14 @@ a:not([class]):hover {
     padding-bottom: 40px;
     margin-bottom: 40px;
   }
-}
-.work__project:last-child {
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-@media only screen and (min-width: 720px) {
   .work__project:nth-child(2) .work__project-logo {
     width: auto;
     max-width: none;
   }
+}
+.work__project:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
 }
 .work__project .btn {
   margin: 10px 0;
