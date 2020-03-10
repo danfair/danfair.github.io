@@ -53,6 +53,13 @@
 			margin-bottom: 0;
 			border-bottom: 0;
 		}
+		
+		&:nth-child(2) {
+			.work__project-logo {
+				width: auto;
+				max-width: none;
+			}
+		}
 
 		.btn {
 			margin: 10px 0;
