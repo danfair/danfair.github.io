@@ -51,11 +51,9 @@
 		
 		&:nth-child(2) {
 			.work__project-logo {
-				max-height: 35%;
-				@include responsive(medium) {
-					width: auto;
-					max-width: none;
-				}
+				max-height: 33%;
+				max-width: none;
+				width: auto;
 			}
 		}
 

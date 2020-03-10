@@ -603,13 +603,9 @@ a:not([class]):hover {
   }
 }
 .work__project:nth-child(2) .work__project-logo {
-  max-height: 35%;
-}
-@media only screen and (min-width: 720px) {
-  .work__project:nth-child(2) .work__project-logo {
-    width: auto;
-    max-width: none;
-  }
+  max-height: 33%;
+  max-width: none;
+  width: auto;
 }
 .work__project:last-child {
   margin-bottom: 0;
