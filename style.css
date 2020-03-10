@@ -604,6 +604,7 @@ a:not([class]):hover {
   .work__project:nth-child(2) .work__project-logo {
     width: auto;
     max-width: none;
+    max-height: 35%;
   }
 }
 .work__project:last-child {
