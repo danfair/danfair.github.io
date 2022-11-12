@@ -40,6 +40,11 @@ p {
   line-height: 1.5;
 }
 
+p a {
+  color: #f60;
+  font-weight: bold;
+}
+
 .social {
   display: flex;
   list-style-type: none;
