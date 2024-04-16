@@ -1,0 +1,14 @@
+---
+const { title, description, image } = Astro.props;
+---
+<section>
+  <div class="flex flex-col sm:flex-row gap-8 container py-20 sm:py-32">
+    <div class="w-full flex items-center justify-center">
+      <img src={image} alt="" class="h-48 w-48 sm:h-64 sm:w-64 lg:h-96 lg:w-96" />
+    </div>
+    <div class="w-full sm:py-24 text-center sm:text-left">
+      <h1 class="text-purple text-3xl md:text-5xl font-bold">{ title }</h1>
+      <p class="mt-4 sm:mt-6 px-5 sm:px-0 w-full max-w-xl text-lg md:text-xl">{description}</p>
+    </div>
+  </div>
+</section>

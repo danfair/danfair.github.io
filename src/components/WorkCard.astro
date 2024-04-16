@@ -1,0 +1,20 @@
+---
+import type { TechIcon } from '../types/IWorkItem'
+
+const { title, description, description2, icon, techIcons } = Astro.props;
+---
+<div class="bg-light-purple rounded-md border border-light-gray p-4 md:p-6 w-full flex flex-col">
+  <div class="flex flex-col sm:flex-row items-center gap-4">
+    <i class={`${icon} text-3xl text-orange`}></i>
+    <h1 class="text-lg md:text-xl font-semibold">{ title }</h1>
+  </div>
+  <p class="my-8 text-center sm:text-left max-sm:px-4">{description}</p>
+  {description2 && <p class="mb-8 text-center sm:text-left max-sm:px-4">{description2}</p>}
+  <ul class="flex max-sm:justify-center items-center gap-3 mt-auto">
+    {techIcons.map((icon: TechIcon) => (
+      <li>
+        <i class={`${icon.icon} text-2xl `} title={icon.name}></i>
+      </li>
+    ))}
+  </ul>
+</div>

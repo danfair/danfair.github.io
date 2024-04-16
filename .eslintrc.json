@@ -1,0 +1,27 @@
+{
+  "extends": ["standard", "prettier", "prettier/standard"],
+  "plugins": ["import", "prettier", "standard"],
+  "rules": {
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "prettier/prettier": 2
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}

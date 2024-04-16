@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+import type { NavButton, INavigationContent } from '../types/INavigationContent';
+
+const content: INavigationContent[] = await getCollection('navigation');
+const { data } = content[0];
+---
+<div>
+  <nav class="container py-4 flex items-center justify-between"> 
+    <div class="flex items-center gap-3">
+      <img src={data.image} alt={data.title} class="h-10 w-10 sm:w-16 sm:h-16">
+      <div>
+        <h1 class="text-xl sm:text-2xl font-bold">{data.title}</h1>
+        <p class="max-sm:text-xs">{data.description}</p>
+      </div>
+    </div>
+    <ul class="flex items-center  gap-6 sm:gap-8">
+      {data.buttons.map((button: NavButton) => (
+        <li>
+          <a href={button.url} title={button.title} target="_blank">
+            <i class={`text-2xl text-purple ${button.icon}`}></i>
+          </a>
+        </li>
+      ))}
+    </ul>
+</nav>
+</div>

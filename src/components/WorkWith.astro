@@ -1,0 +1,17 @@
+---
+import type IWorkWithComany from "../types/IWorkWithCompany"
+
+const { title, companies } = Astro.props;
+---
+<section class="py-16 sm:py-32">
+  <div class="container">
+    <h1 class="text-center text-xl mb-12  ">{ title }</h1>
+    <div class="flex flex-wrap flex-row justify-center gap-6">
+      {companies.map((company: IWorkWithComany) => (
+        <div class="p-5 rounded-full bg-white border border-light-gray">
+          <img src={company.logo} alt={company.name} class="w-24 h-24 mx-auto sm:mx-0 object-contain" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
