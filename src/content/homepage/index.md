@@ -65,4 +65,10 @@ workWith:
       logo: '/img/scotty.png'
     - name: 'Patterson Companies'
       logo: '/img/patterson.jpeg'
+    - name: 'Minnesota Public Radio'
+      logo: '/img/mpr.png'
+    - name: 'Fair State Brewing Cooperative'
+      logo: '/img/fairstate.jpg'
+    - name: 'Heartland Alliance'
+      logo: '/img/heartland.jpeg'
 ---
