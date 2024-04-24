@@ -11,7 +11,7 @@ const content: IHomePageContent[] = await getCollection('homepage');
 const { hero, work, workWith } = content[0].data;
 ---
 
-<Layout title="Dan Fair | Full Stack Software Developer in the Twin Cities" description='Full Stack Software Developer in the Twin Cities'>
+<Layout title="Dan Fair | Software Developer" description='Full Stack Software Developer in the Twin Cities'>
 	<Hero title={hero.title} description={hero.description} image={hero.image} />
 	<Work title={work.title} description={work.description} sections={work.sections} />
 	<WorkWith title={workWith.title} companies={workWith.companies} />
